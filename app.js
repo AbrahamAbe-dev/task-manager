@@ -3,7 +3,7 @@ const tasks = require('./routes/taskRoute');
 const db = require('./database/db');
 const dotenv = require('dotenv');
 const app = express();
-const cors = require ('cors');
+
 
 
 dotenv.config();
@@ -13,7 +13,6 @@ dotenv.config();
 // Middlewares
 app.use(express.static('./public'));
 app.use(express.json());
-app.use(cors())
 app.use('/api/v1/tasks', tasks);
 
 
